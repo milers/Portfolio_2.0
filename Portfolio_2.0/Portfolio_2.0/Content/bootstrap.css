@@ -42,6 +42,16 @@ video {
   display: inline-block;
 }
 
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+.footer {
+    color: #999999;
+
+}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -335,7 +345,7 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color:  #428bca;
   text-decoration: none;
 }
 
@@ -926,7 +936,7 @@ pre code {
 
 @media (min-width: 500px) {
   .container {
-    max-width: 750px;
+    max-width:     750px;
   }
   .col-sm-1,
   .col-sm-2,

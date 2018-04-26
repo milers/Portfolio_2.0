@@ -45,7 +45,22 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year — moja aplikacja platformy ASP.NET</p>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h4>@Html.ActionLink("O mnie", "About", "Home",new {@class = "footer"})</h4>
+
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>@Html.ActionLink("Portfolio", "Portfolio", "Home", new { @class = "footer" })</h4>
+
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>@Html.ActionLink("Kontakt", "Contact", "Home", new { @class = "footer" })</h4>
+                </div>
+
+            </div>
+
+            <p class="text-center">&copy; @DateTime.Now.Year —Smiler</p>
         </footer>
     </div>
 
