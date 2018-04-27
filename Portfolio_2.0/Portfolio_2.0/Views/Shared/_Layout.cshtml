@@ -27,15 +27,7 @@
                     <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
                 </ul>
                 <div class="navbar-right ">
-                  Język:   @{
-            var domainsList = new SelectList(new[]
-            {
-    new SelectListItem { Text = "Polski", Value = "pol", Selected = true },
-    new SelectListItem { Text = "English", Value = "eng"},
-
-}, "Value", "Text");
-                    }
-                    @Html.DropDownList("TopLevelDomains", domainsList)
+                    Język: @Html.DropDownList("LanguageList")
                 </div>
             </div>
 
