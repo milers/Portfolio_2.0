@@ -32,25 +32,7 @@ namespace Portfolio_2._0.Controllers
 
             return View();
         }
-        [HttpGet]
-        public ActionResult _LanguageList()
-        {
-            //    SelectList SL = new SelectList(new[]
-            //{
-            //    new SelectListItem { Text = "Polski", Value = "pol", Selected = true },
-            //    new SelectListItem { Text = "English", Value = "eng"}, }
-            //, "Value", "Text");
 
-            ViewData["LanguageList"] = new SelectList(
-                new SelectList(new[]
-            {
-                new SelectListItem { Text = "Polski", Value = "pol", Selected = true },
-                new SelectListItem { Text = "English", Value = "eng"} })
-                , "Text", "Value");
-
-            //ViewData["LanguageList"] =l;
-            return View();
-        }
 
     }
 }
