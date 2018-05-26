@@ -150,9 +150,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\PortfolioContext.cs" />
+    <Compile Include="DAL\PortfolioDbInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805241912126_InitDb.cs" />
+    <Compile Include="Migrations\201805241912126_InitDb.Designer.cs">
+      <DependentUpon>201805241912126_InitDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805260941330_AddRelationsExceptTranslation.cs" />
+    <Compile Include="Migrations\201805260941330_AddRelationsExceptTranslation.Designer.cs">
+      <DependentUpon>201805260941330_AddRelationsExceptTranslation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805261027130_ModifiedModelsAndRelations.cs" />
+    <Compile Include="Migrations\201805261027130_ModifiedModelsAndRelations.Designer.cs">
+      <DependentUpon>201805261027130_ModifiedModelsAndRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805261045421_ModelCorrection.cs" />
+    <Compile Include="Migrations\201805261045421_ModelCorrection.Designer.cs">
+      <DependentUpon>201805261045421_ModelCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805261106114_RemovedKeys.cs" />
+    <Compile Include="Migrations\201805261106114_RemovedKeys.Designer.cs">
+      <DependentUpon>201805261106114_RemovedKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\PageElement.cs" />
     <Compile Include="Models\Project.cs" />
@@ -184,14 +207,18 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -202,7 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DAL\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +243,23 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805241912126_InitDb.resx">
+      <DependentUpon>201805241912126_InitDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805260941330_AddRelationsExceptTranslation.resx">
+      <DependentUpon>201805260941330_AddRelationsExceptTranslation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261027130_ModifiedModelsAndRelations.resx">
+      <DependentUpon>201805261027130_ModifiedModelsAndRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261045421_ModelCorrection.resx">
+      <DependentUpon>201805261045421_ModelCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261106114_RemovedKeys.resx">
+      <DependentUpon>201805261106114_RemovedKeys.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

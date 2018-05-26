@@ -10,6 +10,7 @@ namespace Portfolio_2._0.Models
         public int TranslationId { get; set; }
         public string ObjectId { get; set; }
         public int LanguageId { get; set; }
+        public Language Language { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
     }

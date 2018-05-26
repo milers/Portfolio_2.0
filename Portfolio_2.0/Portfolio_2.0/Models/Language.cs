@@ -9,5 +9,7 @@ namespace Portfolio_2._0.Models
     {
         public int LanguageId { get; set; }
         public string LanguageName { get; set; }
+
+        public ICollection<Translation> Translations { get; set; }
     }
 }
