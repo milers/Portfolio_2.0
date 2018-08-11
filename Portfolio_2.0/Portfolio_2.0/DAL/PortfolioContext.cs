@@ -28,7 +28,7 @@ namespace Portfolio_2._0.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
 
             // using System.Data.Entity.ModelConfiguration.Conventions;
             // Wyłącza konwencję, która automatycznie tworzy liczbę mnogą dla nazw tabel w bazie danych

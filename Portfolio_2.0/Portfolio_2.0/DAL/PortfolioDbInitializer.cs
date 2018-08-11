@@ -9,7 +9,7 @@ using System.Web;
 
 namespace Portfolio_2._0.DAL
 {
-    class PortfolioDbInitializer: MigrateDatabaseToLatestVersion<PortfolioContext, Configuration>
+    class PortfolioDbInitializer: DropCreateDatabaseIfModelChanges<PortfolioContext>//MigrateDatabaseToLatestVersion<PortfolioContext, Configuration>
     {
         public static void SeedPortfolioData(PortfolioContext context)
         {

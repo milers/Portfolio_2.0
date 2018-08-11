@@ -15,9 +15,25 @@ namespace Portfolio_2._0.Controllers
         {
             
                 
-            return View(pc.Translations);
+            return View(pc.Translations.ToList());
         }
-
+        [HttpPost]
+        public ActionResult getLang(int lang)
+        {
+            PortfolioContext db = new PortfolioContext();
+            
+            var returnList = db.Translations.Where(l => l.LanguageId == lang).Select(r => new { r.ObjectId, r.Name }).ToList();
+            var model = new
+            {
+                AboutMenu = returnList.Where(r => r.ObjectId == "AboutMenu").Select(s => s.Name).FirstOrDefault(),
+                ContactMenu = returnList.Where(r => r.ObjectId == "ContactMenu").Select(s => s.Name).FirstOrDefault(),
+                PortfolioMenu = returnList.Where(r => r.ObjectId == "PortfolioMenu").Select(s => s.Name).FirstOrDefault()
+                //mAbout = returnList.Where(r => r.ObjectId == "ContactMenu").Select(s => s.Name).FirstOrDefault(),
+                //mAbout = returnList.Where(r => r.ObjectId == "ContactMenu").Select(s => s.Name).FirstOrDefault(),
+                //mAbout = returnList.Where(r => r.ObjectId == "ContactMenu").Select(s => s.Name).FirstOrDefault(),
+            };
+            return Json(model);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

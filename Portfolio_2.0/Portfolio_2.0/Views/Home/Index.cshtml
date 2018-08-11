@@ -1,7 +1,9 @@
-﻿@model Portfolio_2._0.Models.Translation
+﻿
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "";
 }
+
+
 <div class="jumbotron">
     <div class="row first">
         
@@ -9,7 +11,7 @@
 
             <h2>Portfolio</h2>
             <p class="lead">Sprawdź moje projekty.</p>
-            <p>@Html.ActionLink("Więcej", "Portfolio", "Home", new { @class = "btn btn-primary btn-lg" })</p>
+            <p>@Html.ActionLink("Więcej", "Portfolio", "Home", new { @class = "btn btn-primary btn-lg" ,@id= "wiecejbtn" })</p>
            
         </div>
 
